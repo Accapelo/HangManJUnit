@@ -76,7 +76,7 @@ public class App
             }
             //om input är ett ord
             else{
-                if(input.equalsIgnoreCase(rightAnswer)){
+                if(compareWords(input,rightAnswer)){
                     System.out.println("Right answer");
                     win = true;
                 }else{
@@ -96,6 +96,14 @@ public class App
             System.out.println("You lose\nThe word was "+rightAnswer);
         }
 
+    }
+
+    public static boolean compareWords(String a, String b){
+        if (a.equalsIgnoreCase(b)){
+            return true;
+        }else{
+            return false;
+        }
     }
 
     public static int compareLetter(char a,int c, String b){
